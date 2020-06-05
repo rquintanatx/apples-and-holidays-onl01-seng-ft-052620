@@ -32,28 +32,14 @@ def add_supply_to_winter_holidays(holiday_hash, supply)
   end
 end
 
-holiday_supplies = {
-  :winter => {
-    :christmas => ["Lights", "Wreath"],
-    :new_years => ["Party Hats"]
-  },
-  :summer => {
-    :fourth_of_july => ["Fireworks", "BBQ"]
-  },
-  :fall => {
-    :thanksgiving => ["Turkey"]
-  },
-  :spring => {
-    :memorial_day => ["BBQ"]
-  }
-}
-
-add_supply_to_winter_holidays(holiday_supplies, "Balloons")
-
 def add_supply_to_memorial_day(holiday_hash, supply)
-  # again, holiday_hash is the same as the ones above
-  # add the second argument to the memorial day array
-
+  holiday_hash.each do |season, seasons_holidays|
+    if season == :spring
+      seasons_holidays.each do |holiday, supply_array|
+        supply_array << supply  
+      end  
+    end 
+  end
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
