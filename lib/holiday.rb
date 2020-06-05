@@ -60,7 +60,7 @@ end
 
 holiday_supplies = {
   :winter => {
-    :christmas => ["Lights", "Wreath"],
+    :christmas_day => ["Lights", "Wreath"],
     :new_years => ["Party Hats"]
   },
   :summer => {
